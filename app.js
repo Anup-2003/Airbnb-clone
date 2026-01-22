@@ -26,10 +26,10 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js")
 
-const dbUrl = process.env.ATLASDB_URL
+const dbUrl = process.env.ATLASDB_URL || "mongodb://127.0.0.1:27017/wanderlust";
 
 main().then(() => {
-  console.log("Connect to DB")
+  console.log("Connected to DB")
 })
 
   .catch(err => console.log(err));
