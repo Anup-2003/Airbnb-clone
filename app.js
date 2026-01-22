@@ -37,12 +37,7 @@ main().then(() => {
 
 
 async function main() {
-  await mongoose.connect(dbUrl, {
-    ssl: true,
-    tls: true,
-    tlsAllowInvalidCertificates: false,
-    tlsAllowInvalidHostnames: false,
-  });
+  await mongoose.connect(dbUrl);
 }
 
 
